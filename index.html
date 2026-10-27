@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Découvrez mon portfolio, mes compétences et mes réalisations.">
+
+  <title>Mon Portfolio | Accueil</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        Mon<span>Portfolio.</span>
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="nav-links">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="diplomes.html">Diplômes</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PRESENTATION -->
+  <main>
+    <section class="hero">
+
+      <div class="hero-content">
+        <p class="hero-intro">Bienvenue sur mon portfolio</p>
+
+        <h1>
+          Bonjour, je suis
+          <span>Prénom Nom.</span>
+        </h1>
+
+        <h2>Mon domaine professionnel</h2>
+
+        <p class="hero-description">
+          Passionné par mon domaine, je développe
+          mes compétences à travers des projets
+          concrets et des expériences enrichissantes.
+
+          Découvrez mon parcours, mes réalisations
+          et les compétences que je peux apporter
+          à votre entreprise.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="projets.html" class="btn btn-primary">
+            Mes réalisations
+          </a>
+
+          <a href="assets/documents/cv.pdf"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener noreferrer">
+            Voir mon CV
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/images/profil.jpg"
+             alt="Portrait de Prénom Nom">
+      </div>
+
+    </section>
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Prénom Nom.</p>
+    <p>Portfolio personnel</p>
+  </footer>
+
+</body>
+</html>
