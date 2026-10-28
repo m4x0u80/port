@@ -5,20 +5,97 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-  <title>Mes diplômes | Portfolio</title>
+  <meta name="description"
+        content="Découvrez le parcours et les diplômes de Maxime ADOLPHE.">
+
+  <title>Diplômes | Maxime ADOLPHE</title>
+
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="diplomes.html">Diplômes</a>
-    <a href="projets.html">Projets</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <main>
-    <h1>Mes diplômes et certifications</h1>
+  <header class="header">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="logo">
+        Mon<span> Portfolio</span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="nav-links">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="diplomes.html" class="active"
+               aria-current="page">Diplômes</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="inner-page">
+    <section class="page-heading">
+      <p class="section-label">MON PARCOURS</p>
+      <h1>Diplômes & <span>formations.</span></h1>
+      <p>
+        Découvrez mon parcours académique, les
+        compétences acquises et mes certifications.
+      </p>
+    </section>
+
+    <section class="timeline" aria-label="Parcours académique">
+
+      <article class="timeline-item reveal">
+        <span class="timeline-date">2024 — 2026</span>
+        <h2>Nom de ton diplôme</h2>
+        <p class="timeline-school">
+          Nom de l'établissement · Ville
+        </p>
+        <p>
+          Présente ici ta formation, les matières
+          principales et les compétences développées.
+        </p>
+        <div class="tag-list">
+          <span>Compétence 1</span>
+          <span>Compétence 2</span>
+          <span>Compétence 3</span>
+        </div>
+      </article>
+
+      <article class="timeline-item reveal">
+        <span class="timeline-date">2021 — 2024</span>
+        <h2>Diplôme précédent</h2>
+        <p class="timeline-school">
+          Nom de l'établissement · Ville
+        </p>
+        <p>
+          Explique ce que cette formation t'a apporté
+          et comment elle contribue à ton parcours.
+        </p>
+      </article>
+
+    </section>
+
+    <section class="subsection">
+      <h2>Mes <span>certifications.</span></h2>
+      <div class="content-grid">
+        <article class="info-card reveal">
+          <p class="section-label">CERTIFICATION</p>
+          <h3>Nom de la certification</h3>
+          <p>Organisme · Année d'obtention</p>
+          <p>Principales compétences validées.</p>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Maxime ADOLPHE.</p>
+    <p>Portfolio personnel</p>
+  </footer>
+
 </body>
 </html>

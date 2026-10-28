@@ -400,3 +400,279 @@ a {
     transition: none;
   }
 }
+
+
+/* ===================================
+   PAGES INTERIEURES - DARK CRIMSON
+=================================== */
+
+.inner-page {
+  max-width: 1200px;
+  min-height: 75vh;
+  margin: 0 auto;
+  padding: 85px 30px 110px;
+}
+
+.page-heading {
+  max-width: 760px;
+  margin-bottom: 65px;
+}
+
+.section-label {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.page-heading h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.12;
+  margin-bottom: 24px;
+}
+
+.page-heading h1 span,
+.subsection h2 span {
+  color: var(--accent);
+}
+
+.page-heading > p:last-child {
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* CARTES */
+.content-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.info-card,
+.project-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.info-card {
+  padding: 32px;
+}
+
+.info-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 40px rgba(217, 4, 41, 0.1);
+}
+
+.info-card h2,
+.info-card h3,
+.project-card h2 {
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.info-card p,
+.project-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.info-card .section-label,
+.project-card .section-label {
+  color: var(--accent);
+}
+
+/* FRISE CHRONOLOGIQUE */
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--accent);
+  margin-left: 12px;
+  padding-left: 36px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 50px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: 3px solid var(--bg-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(217, 4, 41, 0.5);
+}
+
+.timeline-date {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.timeline-item h2 {
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.timeline-school {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.timeline-item > p:last-of-type {
+  color: var(--text-secondary);
+  max-width: 700px;
+}
+
+.subsection {
+  margin-top: 65px;
+}
+
+.subsection h2 {
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+/* ETIQUETTES */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.tag-list span {
+  padding: 6px 12px;
+  background: rgba(217, 4, 41, 0.1);
+  border: 1px solid rgba(217, 4, 41, 0.3);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 12px;
+}
+
+/* PROJETS */
+.project-visual {
+  height: 210px;
+  background:
+    radial-gradient(circle at 75% 25%,
+      rgba(217, 4, 41, 0.25), transparent 55%),
+    #111114;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.project-symbol {
+  font-size: 70px;
+  font-weight: 700;
+  align-self: flex-end;
+  line-height: 1;
+  opacity: 0.65;
+}
+
+.project-body {
+  padding: 30px;
+}
+
+.project-note,
+.contact-note {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+/* CONTACT */
+.contact-link,
+.contact-link:visited {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.contact-link:hover {
+  color: var(--text-primary);
+}
+
+.contact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* ANIMATIONS */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: revealUp 0.75s ease both;
+  }
+
+  @keyframes revealUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-page {
+    padding: 60px 20px 80px;
+  }
+
+  .page-heading {
+    margin-bottom: 45px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 25px;
+  }
+
+  .timeline-item::before {
+    left: -34px;
+  }
+
+  .info-card,
+  .project-body {
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info-card,
+  .project-card {
+    transition: none;
+  }
+}
